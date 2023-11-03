@@ -1,38 +1,462 @@
 .App {
-  text-align: center;
+  height: 915px;
+  color: white;
+  background-color: #020230;
+  display: flex;
+  flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h5{
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+hr{
+  margin: 1rem 0;
+    color: inherit;
+    background-color: currentColor;
+    border: 0;
+    opacity: .25;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url("https://w0.peakpx.com/wallpaper/315/288/HD-wallpaper-millionaire01-wants-to-be-a-millionaire-background-who-wants-to-be-a-millionaire.jpg")
+    center;
+  height: 100%;
+  background-size: cover;
+}
+
+.form-control{
+  background: transparent !important;
+  color: white !important;
+  border: 1px solid white !important;
+  margin-top: 25px !important;
+  display: block;
+  border-radius: 7px !important;
+  width: 221px;
+}
+.form-control::placeholder{
+  color: white !important;
+}
+
+.form-control:hover{
+  background: #040455 !important;
+}
+
+.mt-2{
+  background: transparent !important;
+  color: white !important;
+  border: 1px solid white !important;
+  border-radius: 7px !important;
+  margin-top: 10px !important;
+}
+
+.mt-2:hover{
+  background: #040455 !important;
+}
+.quiz {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+}
+
+.question {
+  width: 80%;
+  background: linear-gradient(#100241, black);
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid white;
+  font-size: 20px;
+}
+
+.question {
+  width: 80%;
+  background: linear-gradient(#100241, black);
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid white;
+  font-size: 20px;
+}
+
+.answers {
+  width: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+}
+
+.Helps button{
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.answer {
+  width: 40%;
+  padding: 10px;
+  margin: 0 10px 20px 10px;
+  text-align: center;
+  background: linear-gradient(#0e0124, #22074d);
+  border: 1px solid white;
+  border-radius: 65px;
+  font-weight: 300;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.usedbtn{
+  opacity: 0.6;
+}
+
+.choice{
+  color: gold;
+  margin-right: 10px;
+}
+.img-flip{
+  animation:antispin 5s infinite linear;
+}
+
+@keyframes antispin {
+0% {
+  -webkit-transform:rotateY(360deg)  ;
+}
+100% {
+  -webkit-transform: rotateY(0deg) ;
+}
+}
+.answer:hover,
+.answer.active {
+  background: mediumblue;
+}
+
+.answer.correct {
+  animation: correct 3s ease forwards;
+}
+
+@keyframes correct {
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
+  }
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#0e0124, #22074d);
+  }
+  62%,
+  100% {
+    background: #33d40f;
+  }
+}
+
+.answer.wrong {
+  animation: wrong 3s ease forwards;
+}
+
+@keyframes wrong {
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
+  }
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#0e0124, #22074d);
+  }
+  62%,
+  100% {
+    background: red;
+  }
+}
+
+.item {
+  display: inline-block;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.item.active {
+  background-color:  #e1a02e;
+}
+
+.money {
+  background-color: #020230;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+}
+
+.money-list {
+  padding: 20px;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.amount {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+}
+
+
+.player-name {
+    color: #e1a02e;
+}
+.player-money {
+  color: #e1a02e;
+}
+
+
+.timer {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 5px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  left: 80px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.earned {
+  position: relative;
+  margin: auto;
+  margin-top: 150px;
+  color: #fff;
+  font-weight: 600;
+}
+
+
+
+.mx-2{
+  background: white;
+  border: none ;
+  text-transform: uppercase;
+    vertical-align: bottom;
+    border: 0;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.2), 0 2px 10px 0 rgba(0,0,0,.1);
+    font-weight: 500;
+    padding: 0.625rem 1.5rem 0.5rem 1.5rem;
+    font-size: .75rem;
+    line-height: 1.5;
+    margin-left: 0.5rem;
+}
+
+.exit{
+  background: rgb(58, 58, 230);
+  text-transform: uppercase;
+    vertical-align: bottom;
+    border: 0;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.2), 0 2px 10px 0 rgba(0,0,0,.1);
+    font-weight: 500;
+    padding: 0.625rem 1.5rem 0.5rem 1.5rem;
+    font-size: .75rem;
+    line-height: 1.5;
+}
+
+.titleHall{
+  font-size: 18px;
+  text-align: center;
+}
+
+.HallAsistance{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .4s;
+}
+
+.backimage{
+  background-image: url('https://wwbm.com/images/form_help.jpg');
+  width: 590px;
+  height: 515px;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
+
+
+.progessabars {
+  height: 220px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.Progress-A {
+  background:#419cc9 !important;
+  width: 30px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+}
+.Progress-B {
+  background:  #dd7b77 !important;
+  width: 30px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+}
+.Progress-C {
+  background: #8dc78d  !important;
+  width: 30px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+}
+.Progress-D {
+  background:  #60bed7 !important;
+  width: 30px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btnHall{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.btt{
+  color: black;
+  background: #fcbf41;
+  outline: none;
+  border: none;
+  width: 255px;
+  height: 44px;
+  transition: .4s;
+  border-radius: 10px;
+}
+
+.btt:hover{
+  background-color: rgb(192 114 31);
+}
+
+.percents{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.txtdiv {
+  background-image: url('https://wwbm.com/images/form_help.jpg');
+  width: 590px;
+  height: 515px;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
+.Friendbtn {
+  color: black;
+  background: #fcbf41;
+  outline: none;
+  border: none;
+  width: 255px;
+  height: 44px;
+  transition: .4s;
+  border-radius: 10px;
+}
+
+
+.Friendbtn:hover{
+  background-color: rgb(192 114 31);
+}
+
+
+.flexbtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.txttitle{
+font-size: 18px;
+text-align: center;
+}
+
+.FriendHelp{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transition: .4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.txt{color: white;}
+
+.rightanswer{
+  color: #fcbf41;
+  font-size: 18px;
+}
+
+.flextxt{
+  display: flex;
+  justify-content: center;
+  align-items: center;height: 60%;
+  text-align: center;
+}
+
+.win-game {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.money-win {
+  color: #30a316;
+  margin-top: 15px;
+}
+
+.win-txt{
+font-size: 30px;
+letter-spacing: 1px;
+}
+
+.restart {
+  outline: none;
+  border: 1px solid white;
+  background: #040455;
+  width: 100px;
+  height: 30px;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 15px;
 }
