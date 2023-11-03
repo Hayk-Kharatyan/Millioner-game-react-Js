@@ -41,7 +41,6 @@ function App() {
 
   let MaxNum = Math.max(HallA, HallB, HallC, HallD)
   let Choices = ["A", "B", "C", "D"]
-
   return (
 
     <div className="App">
@@ -68,7 +67,6 @@ function App() {
             {
               openHallAsistance &&
               <div className="HallAsistance">
-
                 <div className="backimage">
                   <div className="titleHall">Hall assistance</div>
                   <div className="progessabars">
