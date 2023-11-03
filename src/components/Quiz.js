@@ -211,7 +211,7 @@ const Quiz = ({ data, questionNumber, setQuestionNumber, setTimeOut, CallFriend,
             setSwitchAnswer(false)
           }
 
-        }}><img alt="help" width="50px" height="50px" src="./images/switch.png"></img></button>
+        }}><img alt="help" width="50px" height="50px" src="./images/Switch.png"></img></button>
         <button className={HallHelp === true ? "" : "usedbtn"} onClick={() => {
           if (HallHelp) {
             let A = Math.floor(Math.random() * 26)
