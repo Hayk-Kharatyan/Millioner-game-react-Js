@@ -37,10 +37,14 @@ function App() {
   useEffect(()=>{
     earned === "$ 1000000" &&
     winsound()
-  })
+  },[earned])
+
+
 
   let MaxNum = Math.max(HallA, HallB, HallC, HallD)
   let Choices = ["A", "B", "C", "D"]
+  let index = Choices.indexOf(GetAnswerHall)
+  Choices.splice(index,1)
   return (
 
     <div className="App">
@@ -70,10 +74,10 @@ function App() {
                 <div className="backimage">
                   <div className="titleHall">Hall assistance</div>
                   <div className="progessabars">
-                    <div style={{ height: `${HallA}%` }} className="Progress-A">{HallA === MaxNum ? GetAnswerHall : Choices[0]}</div>
-                    <div style={{ height: `${HallB}%` }} className="Progress-B">{HallB === MaxNum ? GetAnswerHall : Choices[1]}</div>
-                    <div style={{ height: `${HallC}%` }} className="Progress-C">{HallC === MaxNum ? GetAnswerHall : Choices[2]}</div>
-                    <div style={{ height: `${HallD}%` }} className="Progress-D">{HallD === MaxNum ? GetAnswerHall : Choices[3]}</div>
+                    <div style={{ height: `${HallA}%` }} className="Progress-A">{HallA === MaxNum ? GetAnswerHall : Choices.includes(Choices[0]) ? Choices[0] : "A"}</div>
+                    <div style={{ height: `${HallB}%` }} className="Progress-B">{HallB === MaxNum ? GetAnswerHall : Choices.includes(Choices[1]) ? Choices[1] : "B"}</div>
+                    <div style={{ height: `${HallC}%` }} className="Progress-C">{HallC === MaxNum ? GetAnswerHall : Choices.includes(Choices[2]) ? Choices[2] : "C"}</div>
+                    <div style={{ height: `${HallD}%` }} className="Progress-D">{HallD === MaxNum ? GetAnswerHall : Choices.includes(Choices[3]) ? Choices[3] : "D"}</div>
                   </div>
                   <div className="percents">
                     <div>{HallA} %</div>
@@ -168,6 +172,10 @@ function App() {
                     setName(null);
                     setQuestionNumber(1);
                     setEarned("$ 0");
+                    setFifty(true)
+                    setHallHelp(true)
+                    setSwitchAnswer(true)
+                    setCallFriend(true)
                   }}
                 >
                   Exit
