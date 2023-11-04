@@ -37,7 +37,7 @@ function App() {
   useEffect(()=>{
     earned === "$ 1000000" &&
     winsound()
-  },[earned])
+  },[earned,winsound])
 
 
 
@@ -53,7 +53,7 @@ function App() {
         <Start setName={setName} setTimeOut={setTimeOut} />
         :
         <div style={{ display: "flex" }}>
-          <div style={{ width: "75%" }}>
+          <div className="quizdiv">
             {
               openDiv === true &&
               <div className="FriendHelp">
@@ -113,7 +113,7 @@ function App() {
                     <h1 className="earned">You Earned Total: {earned}</h1>
                   ) : (
                     <>
-                      <div style={{ height: "50%", position: "relative" }}>
+                      <div className="timerdiv">
                         <div className="timer">
                           <Timer
                             setTimeOut={setTimeOut}
@@ -122,7 +122,7 @@ function App() {
                         </div>
                       </div>
 
-                      <div style={{ height: "50%" }}>
+                      <div className="quizall" >
                         <Quiz
                           data={data}
                           questionNumber={questionNumber}
@@ -154,9 +154,9 @@ function App() {
             }
           </div>
           <div className="money">
-            <ul className="money-list">
+            <div className="money-list">
 
-              <span className="mb-2">
+              <div className="mb-2">
                 <button
                   style={{ float: "right" }}
                   className="mx-2"
@@ -180,9 +180,9 @@ function App() {
                 >
                   Exit
                 </button>
-              </span>
+              </div>
               <span className="player-name">Name: {name}</span>
-              <span className="player-money">Total Earned: {earned}</span>
+              <span className="player-money">Earned: {earned}</span>
 
               <hr />
               {prizeMoney.map((item, i) => (
@@ -197,7 +197,7 @@ function App() {
                 </li>
 
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       }

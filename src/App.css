@@ -39,6 +39,7 @@ hr{
   display: block;
   border-radius: 7px !important;
   width: 221px;
+  padding: 10px;
 }
 .form-control::placeholder{
   color: white !important;
@@ -54,6 +55,7 @@ hr{
   border: 1px solid white !important;
   border-radius: 7px !important;
   margin-top: 10px !important;
+  padding: 10px;
 }
 
 .mt-2:hover{
@@ -65,16 +67,6 @@ hr{
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-}
-
-.question {
-  width: 80%;
-  background: linear-gradient(#100241, black);
-  text-align: center;
-  padding: 20px;
-  border-radius: 10px;
-  border: 2px solid white;
-  font-size: 20px;
 }
 
 .question {
@@ -245,6 +237,7 @@ hr{
   margin-top: 150px;
   color: #fff;
   font-weight: 600;
+  text-align: center;
 }
 
 
@@ -260,7 +253,6 @@ hr{
     padding: 0.625rem 1.5rem 0.5rem 1.5rem;
     font-size: .75rem;
     line-height: 1.5;
-    margin-left: 0.5rem;
 }
 
 .exit{
@@ -459,4 +451,148 @@ letter-spacing: 1px;
   text-align: center;
   border-radius: 5px;
   margin-top: 15px;
+}
+
+.mb-2{
+  display: flex;
+  justify-content: space-around;
+}
+
+.quizdiv{
+  width: 75%;
+}
+
+.timerdiv{
+  position: relative;
+  height: 50%;
+}
+
+.quizall{
+  height: 50%;
+}
+
+.Helps button:hover{
+cursor: pointer;
+opacity: 0.60;
+}
+
+.btn-wh{
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (max-width:725px) {
+  .win-txt{
+    text-align: center;
+  }
+}
+
+@media screen and (max-width:625px) {
+  .backimage{
+    background-image: none !important;
+  }
+
+  .txtdiv{
+    background-image: none !important;
+  }
+ 
+}
+
+@media screen and (max-width:600px) {
+  .quizall{
+    height: 75%;
+  }
+
+  .timerdiv{
+    height: 25%;
+  }
+}
+
+@media screen and (max-width:810px) {
+  .mb-2{
+    flex-direction: column;
+  }
+
+
+  .mx-2{
+    margin-bottom: 10px;
+  }
+
+}
+
+@media screen and (max-width:570px) {
+
+.quizdiv{
+  width: 65%;
+}
+
+
+.win-txt{
+  font-size: 20px;
+}
+.Helps{
+  margin-bottom: 10px;
+}
+.money{
+  width: 35%;
+}
+  
+.answer:first-child{
+margin: 10px 10px 20px 10px;;
+}
+
+.answer{
+  width: 50%;
+}
+
+}
+
+@media screen and (max-width:804px) {
+  .timer{
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+    left: 50px;
+  }
+
+}
+
+@media screen and (max-width:574px) {
+  .timer{
+    bottom: 80px;
+    left: 20px;
+  }
+
+  .answer{
+    width: 75%;
+  }
+  .timerdiv{
+    height: 25%;
+  }
+}
+
+@media screen and (max-width:430px) {
+  .Helps{
+    margin-bottom: 30px;
+  }
+.question{
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+}
+
+@media screen and (max-width:400px) {
+  .answer{
+    width: 80%;
+  } 
+
+  .btn-wh{
+    width: 30px;
+    height: 30px;
+  }
+  
+  .timer{
+    bottom: 120px;
+  }
 }

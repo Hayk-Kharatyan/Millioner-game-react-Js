@@ -178,7 +178,7 @@ const Quiz = ({ data, questionNumber, setQuestionNumber, setTimeOut, CallFriend,
           })
           setFifty(false)
 
-        }}><img alt="help" width="50px" height="50px" src="./images/2answers.webp"></img></button>
+        }}><img alt="help" className="btn-wh" src="./images/2answers.webp"></img></button>
         <button onClick={() => {
           if (CallFriend === true) {
             const randomFriend = Math.floor(Math.random() * friendArr.length);
@@ -204,14 +204,14 @@ const Quiz = ({ data, questionNumber, setQuestionNumber, setTimeOut, CallFriend,
             setOpenDiv(true)
             setCallFriend(false)
           }
-        }} className={CallFriend === true ? "" : "usedbtn"}><img alt="help" width="50px" height="50px" src="./images/phone.webp"></img></button>
+        }} className={CallFriend === true ? "" : "usedbtn"}><img alt="help" className="btn-wh" src="./images/phone.webp"></img></button>
         <button className={SwitchAnswer === true ? "" : "usedbtn"} onClick={() => {
           if (SwitchAnswer) {
             setQuestion(setQuestionOne[randomIndex])
             setSwitchAnswer(false)
           }
 
-        }}><img alt="help" width="50px" height="50px" src="./images/Switch.png"></img></button>
+        }}><img alt="help" className="btn-wh" src="./images/Switch.png"></img></button>
         <button className={HallHelp === true ? "" : "usedbtn"} onClick={() => {
           if (HallHelp) {
             let A = Math.floor(Math.random() * 26)
@@ -238,7 +238,7 @@ const Quiz = ({ data, questionNumber, setQuestionNumber, setTimeOut, CallFriend,
             setOpenHallAsistance(true)
             setHallHelp(false)
           }
-        }}><img alt="help" width="50px" height="50px" src="./images/peoplehelp.png"></img></button>
+        }}><img alt="help" className="btn-wh" src="./images/peoplehelp.png"></img></button>
       </div>
       <div className="question">{question?.question}</div>
       <div className="answers">
