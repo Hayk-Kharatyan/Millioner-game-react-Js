@@ -40,11 +40,21 @@ function App() {
   },[earned,winsound])
 
 
+  let Maxs = [HallA, HallB, HallC, HallD]
+  let MaxNum = Maxs.sort(function(a, b) {
+    return a - b;
+  }).reverse()
 
-  let MaxNum = Math.max(HallA, HallB, HallC, HallD)
   let Choices = ["A", "B", "C", "D"]
   let index = Choices.indexOf(GetAnswerHall)
-  Choices.splice(index,1)
+   Choices.map((choice)=>{
+    if(choice===GetAnswerHall){
+      Choices.splice(index,1)
+      Choices.unshift(GetAnswerHall)
+    }
+      return choice
+  })
+  let choiceStyles = ["Progress-A","Progress-B","Progress-C","Progress-D"]
   return (
 
     <div className="App">
@@ -74,16 +84,26 @@ function App() {
                 <div className="backimage">
                   <div className="titleHall">Hall assistance</div>
                   <div className="progessabars">
-                    <div style={{ height: `${HallA}%` }} className="Progress-A">{HallA === MaxNum ? GetAnswerHall : Choices.includes(Choices[0]) ? Choices[0] : "A"}</div>
-                    <div style={{ height: `${HallB}%` }} className="Progress-B">{HallB === MaxNum ? GetAnswerHall : Choices.includes(Choices[1]) ? Choices[1] : "B"}</div>
-                    <div style={{ height: `${HallC}%` }} className="Progress-C">{HallC === MaxNum ? GetAnswerHall : Choices.includes(Choices[2]) ? Choices[2] : "C"}</div>
-                    <div style={{ height: `${HallD}%` }} className="Progress-D">{HallD === MaxNum ? GetAnswerHall : Choices.includes(Choices[3]) ? Choices[3] : "D"}</div>
+                    {
+                      Choices.map((choice,i)=>{
+                        return(
+                          <div key={i} style={{height:`${MaxNum[i]}%`}} className={choiceStyles[i]}>
+                            {choice}
+                          </div>
+                        )
+                      })
+                    }
                   </div>
                   <div className="percents">
-                    <div>{HallA} %</div>
-                    <div>{HallB} %</div>
-                    <div>{HallC} %</div>
-                    <div>{HallD} %</div>
+                  {
+                    MaxNum.map((Max,i)=>{
+                      return(
+                        <div key={i}>
+                          {Max} %
+                        </div>
+                      )
+                    })
+                  }
                   </div>
 
                   <div className="btnHall">

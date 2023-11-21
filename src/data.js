@@ -173,7 +173,7 @@ const data = [
       },
       {
         choice: "D",
-        text: "Enrico Fermi",
+        text: "David Gross",
         correct: false,
       },
     ],
