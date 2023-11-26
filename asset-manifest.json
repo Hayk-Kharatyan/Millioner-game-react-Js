@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Millioner-game-react-Js/static/css/main.00105564.css",
-    "main.js": "/Millioner-game-react-Js/static/js/main.08fb4eda.js",
+    "main.js": "/Millioner-game-react-Js/static/js/main.a8a19d2c.js",
     "static/js/845.90c103eb.chunk.js": "/Millioner-game-react-Js/static/js/845.90c103eb.chunk.js",
     "static/js/787.6a541d2d.chunk.js": "/Millioner-game-react-Js/static/js/787.6a541d2d.chunk.js",
     "static/media/win.mp3": "/Millioner-game-react-Js/static/media/win.34749fddd8f6072e1889.mp3",
@@ -12,12 +12,12 @@
     "static/media/clickedanswer.mp3": "/Millioner-game-react-Js/static/media/clickedanswer.9671890e962ccc6c5505.mp3",
     "index.html": "/Millioner-game-react-Js/index.html",
     "main.00105564.css.map": "/Millioner-game-react-Js/static/css/main.00105564.css.map",
-    "main.08fb4eda.js.map": "/Millioner-game-react-Js/static/js/main.08fb4eda.js.map",
+    "main.a8a19d2c.js.map": "/Millioner-game-react-Js/static/js/main.a8a19d2c.js.map",
     "845.90c103eb.chunk.js.map": "/Millioner-game-react-Js/static/js/845.90c103eb.chunk.js.map",
     "787.6a541d2d.chunk.js.map": "/Millioner-game-react-Js/static/js/787.6a541d2d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.00105564.css",
-    "static/js/main.08fb4eda.js"
+    "static/js/main.a8a19d2c.js"
   ]
 }
