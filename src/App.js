@@ -188,7 +188,7 @@ function App() {
                 >
                   Quit
                 </button>
-                <a href="/"
+                <a href="/Millioner-game-react-Js"
                   style={{ float: "right" }}
                   className="exit"
                 >
