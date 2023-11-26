@@ -18,7 +18,6 @@ const Start = ({ setName, setTimeOut }) => {
 
 
   return (
-
     <div
       style={{
         margin: "auto",

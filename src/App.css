@@ -210,6 +210,7 @@ hr{
 
 .player-name {
     color: #e1a02e;
+    margin-top: 10px;
 }
 .player-money {
   color: #e1a02e;
@@ -254,6 +255,13 @@ hr{
     font-size: .75rem;
     line-height: 1.5;
 }
+.mx-2:hover{
+opacity: 0.7;
+}
+
+.exit:hover{
+  opacity: 0.7;
+  }
 
 .exit{
   background: rgb(58, 58, 230);
@@ -261,10 +269,10 @@ hr{
     vertical-align: bottom;
     border: 0;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.2), 0 2px 10px 0 rgba(0,0,0,.1);
-    font-weight: 500;
     padding: 0.625rem 1.5rem 0.5rem 1.5rem;
     font-size: .75rem;
-    line-height: 1.5;
+    text-decoration: none;
+    color: black;
 }
 
 .titleHall{

@@ -389,8 +389,8 @@ const data = [
       },
     ],
   },
-].sort(() => Math.random() - 0.5)
-
+]
+.sort(() => Math.random() - 0.5)
 const prizeMoney = [
   { id: 1, amount: "$ 100" },
   { id: 2, amount: "$ 200" },

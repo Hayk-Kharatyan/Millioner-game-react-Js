@@ -5,8 +5,7 @@ import correct from "../sounds/correct.mp3";
 import wrong from "../sounds/wrong.mp3";
 import clickedanswer from "../sounds/clickedanswer.mp3"
 
-const Quiz = ({ data, questionNumber, setQuestionNumber, setTimeOut, CallFriend, setCallFriend, HallHelp, setHallHelp, SwitchAnswer, setSwitchAnswer, Fifty, setFifty, setOpenDiv, setGetAnswer, setOpenHallAsistance, setHallA, setHallB, setHallC, setHallD, setGetFriend, setGetText, setGetAnswerHall }) => {
-  const [question, setQuestion] = useState(null);
+  const Quiz = ({ data , question , setQuestion, questionNumber, setQuestionNumber, setTimeOut, CallFriend, setCallFriend, HallHelp, setHallHelp, SwitchAnswer, setSwitchAnswer, Fifty, setFifty, setOpenDiv, setGetAnswer, setOpenHallAsistance, setHallA, setHallB, setHallC, setHallD, setGetFriend, setGetText, setGetAnswerHall }) => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [className, setClassName] = useState("answer");
   const [letsPlay] = useSound(play);
@@ -125,11 +124,12 @@ const Quiz = ({ data, questionNumber, setQuestionNumber, setTimeOut, CallFriend,
 
   useEffect(() => {
     setQuestion(data[questionNumber - 1]);
-  }, [data, questionNumber]);
+  }, [data, questionNumber,setQuestion]);
 
   useEffect(() => {
     letsPlay();
   }, [letsPlay]);
+  console.log(question);
 
   const delay = (duration, callBack) => {
     setTimeout(() => {
@@ -169,7 +169,7 @@ const Quiz = ({ data, questionNumber, setQuestionNumber, setTimeOut, CallFriend,
 
       <div className="Helps">
         <button className={Fifty === true ? "" : "usedbtn"} onClick={() => {
-          question?.answers.forEach((a) => {
+          question.answers.forEach((a) => {
             if (a.correct === false && AnswerCount <= 2) {
               a.text = ""
               a.choice = ""
@@ -186,7 +186,7 @@ const Quiz = ({ data, questionNumber, setQuestionNumber, setTimeOut, CallFriend,
             const randomText = Math.floor(Math.random() * friendOne.texts.length);
             const Textone = friendOne.texts[randomText]
 
-            question?.answers.map((item) => {
+            question.answers.map((item) => {
               if (item.correct) {
                 setGetAnswer(item.choice)
               }

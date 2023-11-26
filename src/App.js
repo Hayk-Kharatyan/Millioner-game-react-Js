@@ -9,6 +9,7 @@ import useSound from "use-sound";
 
 function App() {
   const [name, setName] = useState(null);
+  const [question, setQuestion] = useState(null);
   const [questionNumber, setQuestionNumber] = useState(1);
   const [timeOut, setTimeOut] = useState(false);
   const [earned, setEarned] = useState("$ 0");
@@ -39,8 +40,8 @@ function App() {
     winsound()
   },[earned,winsound])
 
-
   let Maxs = [HallA, HallB, HallC, HallD]
+
   let MaxNum = Maxs.sort(function(a, b) {
     return a - b;
   }).reverse()
@@ -142,9 +143,11 @@ function App() {
                         </div>
                       </div>
 
-                      <div className="quizall" >
+                      <div className="quizall">
                         <Quiz
                           data={data}
+                          question={question}
+                          setQuestion={setQuestion}
                           questionNumber={questionNumber}
                           setQuestionNumber={setQuestionNumber}
                           setTimeOut={setTimeOut}
@@ -185,21 +188,12 @@ function App() {
                 >
                   Quit
                 </button>
-                <button
+                <a href="/"
                   style={{ float: "right" }}
                   className="exit"
-                  onClick={() => {
-                    setName(null);
-                    setQuestionNumber(1);
-                    setEarned("$ 0");
-                    setFifty(true)
-                    setHallHelp(true)
-                    setSwitchAnswer(true)
-                    setCallFriend(true)
-                  }}
                 >
                   Exit
-                </button>
+                </a>
               </div>
               <span className="player-name">Name: {name}</span>
               <span className="player-money">Earned: {earned}</span>
